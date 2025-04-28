@@ -60,6 +60,10 @@ nav {
     font-weight: bold;
     transition: color 0.3s ease;
   }
+
+  html {
+    scroll-behavior: smooth;
+  }
   
   nav a:hover {
     text-decoration: none;
