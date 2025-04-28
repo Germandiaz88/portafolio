@@ -4,7 +4,10 @@
     padding: 0;
     box-sizing: border-box;
   }
-  
+
+  html {
+    scroll-behavior: smooth;
+  }
   /* Estilos generales */
   body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -19,6 +22,11 @@
   }
   a:hover {
     text-decoration: underline;
+  }
+
+  a:hover, button:hover {
+    transform: scale(1.1);
+    transition: transform 0.5s ease, background-color 0.5s ease;
   }
 
 
@@ -59,16 +67,12 @@ nav {
     color: white;
     font-weight: bold;
     transition: color 0.3s ease;
-  }
-
-  html {
-    scroll-behavior: smooth;
-  }
-  
+  } 
   nav a:hover {
     text-decoration: none;
     color: #00bfff;
   }
+
   /* Secciones dentro de main */
 main {
     padding: 40px 20px;
@@ -93,24 +97,29 @@ main {
 
   .tecnologias {
     display: flex;
-    justify-content: center; /* Centra las imágenes horizontalmente */
-    align-items: center; /* Centra las imágenes verticalmente */
-    flex-wrap: wrap; /* Permite que las imágenes se acomoden en nuevas filas cuando no caben */
-    gap: 70px; /* Espacio entre las imágenes */
+    justify-content: center; 
+    align-items: center; 
+    flex-wrap: wrap; 
+    gap: 20px;
   }
   
+  
   .tecnologias img:hover {
-    transform: scale(1.2);
-    
+    transform: scale(1.1);
+  }
+
+  a:hover, button:hover {
+    transform: scale(1.1);
+    transition: transform 0.5s ease, background-color 0.5s ease;
   }
 
 #contacto a img {
-  margin: 10px;
+  margin: 5px;
   transition: transform 0.3s ease;
 }
 
 #contacto a img:hover {
-  transform: scale(1.1);
+  transform: scale(1.7);
 }
   section h2 {
     font-size: 2rem;
@@ -123,9 +132,7 @@ main {
     margin-bottom: 16px;
     color: #666;
   }
-  /* Mobile-first: estilos base, se aplican por defecto */
-
-/* Para pantallas más grandes (tablets y desktop) */
+  /* Mobile-first:*/
 @media (min-width: 768px) {
     /* Header */
     header {
