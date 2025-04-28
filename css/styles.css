@@ -1,0 +1,165 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Estilos generales */
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  a {
+    color: #0077ff;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+
+
+    /* ESTILO!! */
+  header {
+    background-color: #1e1e2f;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+  }
+  
+  header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  header p {
+    font-size: 1.2rem;
+    color: #cccccc;
+  }
+
+/* Navegación */
+nav {
+    background-color: #29293d;
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+    padding: 15px 0;
+    margin: 0;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  nav a:hover {
+    text-decoration: none;
+    color: #00bfff;
+  }
+  /* Secciones dentro de main */
+main {
+    padding: 40px 20px;
+    background-color: #ffffff;
+  }
+  
+  section {
+    text-align: center;
+    margin-left: 15%;
+    margin-right: 15%;
+    border-radius: 15px;
+    background-color: #e2e2e2e7;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0; /* 👈 invisible al principio */
+    transform: translateY(20px); /* 👈 un poco desplazado hacia abajo */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* 👈 transición suave */
+  }
+  section.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .tecnologias {
+    display: flex;
+    justify-content: center; /* Centra las imágenes horizontalmente */
+    align-items: center; /* Centra las imágenes verticalmente */
+    flex-wrap: wrap; /* Permite que las imágenes se acomoden en nuevas filas cuando no caben */
+    gap: 70px; /* Espacio entre las imágenes */
+  }
+  
+  .tecnologias img:hover {
+    transform: scale(1.2);
+    
+  }
+  
+  section h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  section p {
+    font-size: 1.1rem;
+    margin-bottom: 16px;
+    color: #666;
+  }
+  /* Mobile-first: estilos base, se aplican por defecto */
+
+/* Para pantallas más grandes (tablets y desktop) */
+@media (min-width: 768px) {
+    /* Header */
+    header {
+      padding: 80px 20px;
+    }
+  
+    header h1 {
+      font-size: 3rem;
+    }
+  
+    header p {
+      font-size: 1.5rem;
+    }
+  
+    /* Menú de navegación */
+    nav ul {
+      gap: 40px;
+    }
+  
+    /* Secciones */
+    main {
+      padding: 60px 20px;
+    }
+  
+    section {
+      margin-bottom: 50px;
+      padding: 30px;
+    }
+  
+    section h2 {
+      font-size: 2.2rem;
+    }
+  
+    section p {
+      font-size: 1.2rem;
+    }
+  }
+  
+  /* Para pantallas más grandes (escritorios grandes) */
+  @media (min-width: 1024px) {
+    nav ul {
+      gap: 50px;
+    }
+  
+    section {
+      margin-bottom: 60px;
+      padding: 40px;
+    }
+  }
